@@ -1,0 +1,18 @@
+name: Extension Validation
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate Manifest
+        run: |
+          # Simple check if manifest exists
+          test -f src/manifest.json
+      - name: Run Tests
+        run: |
+          # Placeholder for future JS test runner (e.g., Jest/Mocha)
+          echo "Running unit tests..."
+          # node tests/hls-parser.test.js
