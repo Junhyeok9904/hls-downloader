@@ -14,5 +14,11 @@ chrome.declarativeNetRequest.onRuleMatchedDebug.addListener((info) => {
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "getStreams") {
         sendResponse({ streams: detectedStreams });
+    } else if (request.action === "validateStream") {
+        fetch(request.url).then(res => res.text()).then(text => {
+            const isProtected = text.includes("#EXT-X-KEY");
+            sendResponse({ isProtected });
+        });
+        return true; 
     }
 });
