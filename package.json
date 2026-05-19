@@ -7,7 +7,8 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "tape tests/*.test.js"
+    "test": "tape tests/*.test.js",
+    "audit": "node scripts/security-audit.js"
   },
   "repository": {
     "type": "git",
