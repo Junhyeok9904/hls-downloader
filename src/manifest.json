@@ -5,7 +5,8 @@
     "description": "Download authorized HLS media streams.",
     "permissions": [
         "storage",
-        "declarativeNetRequest"
+        "declarativeNetRequest",
+        "declarativeNetRequestFeedback"
     ],
     "background": {
         "service_worker": "background.js"

@@ -1,1 +1,13 @@
-[]
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "block"
+    },
+    "condition": {
+      "urlFilter": "*.m3u8*",
+      "resourceTypes": ["xmlhttprequest", "fetch", "other"]
+    }
+  }
+]
